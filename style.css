@@ -1,0 +1,229 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+
+}
+
+body {
+    overflow-x: hidden;
+}
+
+/*  Hero section */
+#hero {
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('background-pic.png');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    text-align: center;
+}
+
+nav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 15px 6px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    width: 120px;
+}
+
+nav li {
+    display: inline;
+    list-style: none;
+    margin: 5px 25px;
+
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff;
+    position: relative;
+}
+
+nav a::after {
+    content: '';
+    width: 0;
+    height: 3px;
+    background-color: #68acb6;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.5s;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+.title {
+    position: relative;
+    top: 35%;
+    text-align: center;    
+}
+
+.title h1 {
+    font-size: 160px;
+    -webkit-text-stroke: 1px #fff;
+    color: transparent;
+    background-image: linear-gradient(#fff, #fff);
+    background-repeat: no-repeat;
+    background-clip: text;
+    -webkit-background-clip: text;
+    background-position: -1000px 0;
+    animation: backcolor 5s linear forwards;
+}
+
+@keyframes backcolor {
+    100% {
+        background-position: 0 0;
+    }
+}
+
+.action-btn {
+    background-color: transparent;
+    border: 1px solid #fff;
+    padding: 15px 20px;
+    color: #fff;
+    font-size: 20px;
+    position: relative;
+    transition: background-color 0.25s linear;
+    cursor: pointer;
+}
+
+.action-btn:hover{
+    background-color: #68acb6;
+}
+
+/* Explore */
+
+#explore {
+    text-align: center;
+    width: 100%;
+    margin: 50px 20px;
+}
+
+h2 {
+    font-size: 50px;
+}
+
+.gallery {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.image-box {
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 0 5px;
+    padding-top: 400px;
+    color: #fff;
+    font-weight: 600;
+    height: 500px;
+    width: 150px;
+    transition: width 0.7s linear;
+}
+
+.image-box:hover {
+    width: 1000px;
+}
+
+.image-box p {
+    opacity: 0;
+    transition: opacity 0.7s linear;
+}
+
+.image-box:hover p {
+    opacity: 1;
+}
+
+#beaches {
+    background-image: url(beach.webp);
+    width: 600px;
+}
+
+
+#animals {
+    background-image: url(exotic.jpg);
+}
+
+#sights {
+    background-image: url(sights.jpg);
+}
+
+#food {
+    background-image: url(food.jpg);
+}
+
+#islands {
+    background-image: url(islands.jpg);
+}
+
+
+/* Contact-us */
+
+#contact-us {
+    display: flex;
+    margin: 50px 30px 10px 30px;
+}
+
+.left-side {
+    flex: 0.5;
+    color: #fff;
+    background-color: #68acb6;
+    padding: 200px 0;
+    height: 500px;
+    text-align: center;
+    z-index: 2;
+}
+
+.left-side h2 {
+    margin-bottom: 20px;
+}
+
+.left-side .action-btn {
+    transition: all 0.5s linear;
+}
+.left-side .action-btn:hover {
+    background-color: #fff;
+    color: #68acb6;
+}
+.right-side {
+    height: 500px;
+    flex: 0.5;
+}
+
+.right-side img {
+    position: relative;
+}
+
+#plane {
+    bottom: 60px;
+    height: 100px;
+    animation: fly 15s linear infinite normal;
+}
+
+@keyframes fly {
+    0% {
+        left: -150px;
+    }
+    100% {
+        left: 1200px;
+    }
+}
+
+#beach-clipart {
+    height: 180px;
+    top: 305px;
+}
